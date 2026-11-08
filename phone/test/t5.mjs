@@ -1,0 +1,11 @@
+import fs from "node:fs";
+import * as mupdf from "mupdf";
+import { overlay, rectPath, RGB, pageXObject, savePdf } from "../src/engine/core.js";
+const doc = new mupdf.PDFDocument(fs.readFileSync("fixtures/sample.pdf"));
+const page = doc.loadPage(0);
+overlay(doc, page, (dev) => dev.fillPath(rectPath([10,10,200,200]), false, mupdf.Matrix.identity, RGB(), [1,0,0], 1));
+const x = page.getObject().get("Resources").get("XObject").get("MyP0");
+console.log("in-memory isStream", x.isStream(), x.toString());
+const d2 = new mupdf.PDFDocument(savePdf(doc));
+const x2 = d2.loadPage(0).getObject().get("Resources").get("XObject").get("MyP0");
+console.log("saved isStream", x2.isStream());

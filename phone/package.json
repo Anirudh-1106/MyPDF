@@ -1,0 +1,17 @@
+{
+  "name": "phone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@techstark/opencv-js": "^5.0.0-release.1",
+    "mupdf": "^1.28.1"
+  },
+  "type": "module"
+}

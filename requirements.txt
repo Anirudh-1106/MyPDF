@@ -1,0 +1,18 @@
+flask>=3.0
+waitress>=3.0
+pymupdf>=1.24
+pymupdf4llm
+pdf2docx
+pillow
+pillow-heif
+opencv-python-headless
+numpy
+qrcode
+openpyxl
+python-docx
+python-pptx
+markdown
+psutil
+rapidocr_onnxruntime
+pywebview>=5.0
+pywin32; sys_platform == "win32"

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MyPDF</title>
+  <meta name="description" content="All-in-one PDF & document toolkit: edit, convert, merge, split, compress, scan, OCR, sign.">
+  <meta name="theme-color" content="#e5484d">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="MyPDF">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" id="home-link" title="Home"><div class="logo">PDF</div><span class="t">MyPDF</span></div>
+    <div class="search">
+      <svg class="i" viewBox="0 0 24 24"><path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z M21 21l-4.3-4.3"/></svg>
+      <input id="search" type="search" placeholder="Search tools… (e.g. compress, word, sign)" autocomplete="off">
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" id="btn-phone" title="Use on your phone"><svg class="i" viewBox="0 0 24 24"><path d="M7 2h10v20H7z M11 18h2"/></svg><span class="lbl">Connect phone</span></button>
+      <button class="icon-btn" id="btn-theme" title="Light / dark"><svg class="i" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    </div>
+  </header>
+  <main id="view"></main>
+  <div class="toasts" id="toasts"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Runtime data (temp files, webview profile, phone access key)
+data/
+
+# Node / phone bundle
+phone/node_modules/
+phone/dist/
+
+# Android build output (MyPDF.apk itself IS committed for download)
+android/.gradle/
+android/build/
+android/app/build/
+android/app/src/main/assets/www/
+android/local.properties
+android/hs_err_pid*.log
+*.jks
+*.keystore
+
+# Tooling / editor
+.impeccable/
+.vscode/
+.idea/

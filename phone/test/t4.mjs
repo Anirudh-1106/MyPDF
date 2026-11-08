@@ -1,0 +1,11 @@
+import * as mupdf from "mupdf";
+const d = new mupdf.PDFDocument();
+const s = d.addStream("0 0 m 10 10 l S", { Type: "XObject", Subtype: "Form", BBox: [0,0,10,10] });
+console.log("fresh isStream", s.isStream(), s.isIndirect(), s.toString());
+const s2 = d.addStream(new Uint8Array([48,32,48]), {});
+console.log("u8 isStream", s2.isStream(), s2.readStream().asString());
+const page = d.addPage([0,0,100,100],0,{XObject:{X:s}},"q /X Do Q"); d.insertPage(-1,page);
+const b = d.saveToBuffer("garbage=3,compress,decrypt");
+const d2 = new mupdf.PDFDocument(b);
+const x = d2.loadPage(0).getObject().get("Resources").get("XObject").get("X");
+console.log("after save", x.isStream(), x.toString());
